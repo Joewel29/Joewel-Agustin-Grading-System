@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Barangay Poblacion Ilawod, Passi City Iloilo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="Services.css">
+</head>
+<body>
+    <!-- Loading Overlay -->
+<div id="loading">
+    <div class="spinner"></div>
+</div>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <img src="Logo1.jpg" alt="Barangay Logo" class="custom-logo">
+                    <div class="logo-text">
+                        <h1>Barangay Poblacion Ilawod</h1>
+                        <p>Passi City, Iloilo</p>
+                    </div>
+                </div>
+                
+                <nav>
+                    <ul class="nav-menu" id="navMenu">
+                        <li><a href="Index.html">Home</a></li>
+                        <li><a href="#services" data-filename="services.html" class="active">Services</a></li>
+                        <li><a href="News.html">News</a></li>
+                        <li><a href="Contact.html">Contact</a></li>
+                    </ul>
+                    <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content fade-in-up">
+                <h2>Barangay Services</h2>
+                <p>Assistance • Good Service • 24/7 Community Support</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2>Our Core Services</h2>
+                <p>Comprehensive support for all your barangay needs with efficient processing and friendly service</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Clearance Processing -->
+                <div class="service-card fade-in-up">
+                    <div class="service-icon">
+                        <i class="fas fa-file-signature"></i>
+                    </div>
+                    <h3>Clearance Processing</h3>
+                    <div class="service-time">
+                        <i class="fas fa-clock"></i> 15-30 minutes
+                    </div>
+                    <p>Business permits, residency clearances, and other official clearances processed quickly and efficiently.</p>
+                    <div class="service-requirements">
+                        <h4>Requirements:</h4>
+                        <ul class="requirements-list">
+                            <li>Valid ID</li>
+                            <li>Barangay Tax Clearance (if applicable)</li>
+                            <li>Completed application form</li>
+                                                      <li>2x2 ID photo (optional)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Certificates -->
+                <div class="service-card fade-in-up">
+                    <div class="service-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Certificates</h3>
+                    <div class="service-time">
+                        <i class="fas fa-clock"></i> 10-20 minutes
+                    </div>
+                    <p>Birth, marriage, death, indigency, and other certificates issued on the spot.</p>
+                    <div class="service-requirements">
+                        <h4>Requirements:</h4>
+                        <ul class="requirements-list">
+                            <li>Valid ID of requester</li>
+                            <li>Authorization letter (if representative)</li>
+                            <li>Complete names and details</li>
+                            <li>Payment of fees</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Health Services -->
+                <div class="service-card fade-in-up">
+                    <div class="service-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Health Services</h3>
+                    <div class="service-time">
+                        <i class="fas fa-clock"></i> Walk-in / Appointment
+                    </div>
+                    <p>Free medical consultations, vaccination drives, health monitoring, and wellness programs.</p>
+                    <div class="service-requirements">
+                        <h4>Available Services:</h4>
+                        <ul class="requirements-list">
+                            <li>Free consultations</li>
+                            <li>Vaccinations & boosters</li>
+                            <li>Blood pressure checks</li>
+                            <li>Medicine distribution</li>
+                            <li>Health seminars</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Replace the CTA section with this FULL-WIDTH version -->
+<section class="cta-section-full">
+    <div class="container">
+        <div class="cta-content fade-in-up">
+            <div class="cta-text">
+                <h2>Need Assistance Right Now?</h2>
+                <p>We're here 24/7 to serve you. Visit our Barangay Hall or call our hotline for immediate help.</p>
+            </div>
+            <div class="cta-buttons">
+                <a href="tel:+63335550123" class="cta-button primary">
+                    <i class="fas fa-phone"></i> Call Hotline Now
+                </a>
+                <a href="Contact.html" class="cta-button secondary">
+                    <i class="fas fa-map-marker-alt"></i> Visit Barangay Hall
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+    <script>
+        // Mobile Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+            });
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Staggered animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.style.animationDelay = `${index * 0.1}s`;
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }, 100);
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in-up elements
+        document.querySelectorAll('.fade-in-up').forEach((el, index) => {
+            el.style.transition = 'all 0.8s ease';
+            observer.observe(el);
+        });
+
+        // Active nav highlighting - PRESERVE filename active
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-menu a');
+
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                // Skip filename-matched links during scroll highlighting
+                if (link.hasAttribute('data-filename')) {
+                    return;
+                }
+                // Remove active only for section links
+                if (link.getAttribute('href').startsWith('#')) {
+                    link.classList.remove('active');
+                }
+                if (link.getAttribute('href') === `#${current}` || 
+                    link.textContent.trim().toLowerCase() === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+       
+    const links = document.querySelectorAll('.nav-menu a');
+    const currentPage = window.location.pathname.split("/").pop().toLowerCase();
+
+    links.forEach(link => {
+        if(link.getAttribute("href").toLowerCase() === currentPage){
+            link.classList.add("active");
+        }
+    });
+      window.addEventListener('load', () => {
+        const loader = document.getElementById('loading');
+        loader.style.opacity = '0';
+        loader.style.transition = 'opacity 0.5s ease';
+        setTimeout(() => loader.style.display = 'none', 500);
+    });
+
+    </script>
+</body>
+</html>

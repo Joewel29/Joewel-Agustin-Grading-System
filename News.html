@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News & Announcements</title>
+
+    <!-- Same styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Loading Overlay -->
+<div id="loading">
+    <div class="spinner"></div>
+</div>
+
+<!-- HEADER -->
+<header>
+    <div class="container">
+        <div class="header-content">
+            <div class="logo-section">
+                <img src="Logo1.jpg" class="custom-logo">
+                <div class="logo-text">
+                    <h1>Barangay Poblacion Ilawod</h1>
+                    <p>Passi City, Iloilo</p>
+                </div>
+            </div>
+
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="Services.html">Services</a></li>
+                    <li><a href="News.html">News</a></li>
+                     <li><a href="Contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+   <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content fade-in-up">
+                <h2>News & Announcements</h2>
+                <p>Stay tune for the lastest updates with our barangay.</p>
+            </div>
+        </div>
+    </section>
+<!-- NEWS SECTION -->
+<section class="news-section">
+    <div class="container">
+
+        <div class="news-title">
+            <h2>Incoming Events</h2>
+        </div>
+
+        <div class="news-grid">
+
+            <!-- Announcement 1 -->
+            <div class="news-card">
+                <div class="news-date">March 20, 2026</div>
+                <h3>Community Clean-Up Drive</h3>
+                <p>
+                    All residents are invited to join our Barangay Clean-Up Drive this coming Saturday.
+                    Let’s work together to maintain cleanliness and protect our environment.
+                </p>
+            </div>
+
+            <!-- Announcement 2 -->
+            <div class="news-card">
+                <div class="news-date">March 15, 2026</div>
+                <h3>Free Medical Check-Up</h3>
+                <p>
+                    A free medical mission will be conducted at the Barangay Hall.
+                    Services include general check-up, blood pressure monitoring, and consultation.
+                </p>
+            </div>
+
+            <!-- Announcement 3 -->
+            <div class="news-card">
+                <div class="news-date">March 10, 2026</div>
+                <h3>Youth Sports Program Registration</h3>
+                <p>
+                    Registration for the Summer Youth Sports Program is now open.
+                    Interested participants may visit the Barangay Office.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+  <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <i class="fas fa-users"></i>
+                    <span class="stat-number">5,200+</span>
+                    <strong>Residents</strong>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-home"></i>
+                    <span class="stat-number">1,200+</span>
+                    <strong>Households</strong>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-calendar-check"></i>
+                    <span class="stat-number">24/7</span>
+                    <strong>Services</strong>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-star"></i>
+                    <span class="stat-number">95%</span>
+                    <strong>Satisfaction</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
+<script>
+    const links = document.querySelectorAll('.nav-menu a');
+    const currentPage = window.location.pathname.split("/").pop().toLowerCase();
+
+    links.forEach(link => {
+        if(link.getAttribute("href").toLowerCase() === currentPage){
+            link.classList.add("active");
+        }
+    });
+      window.addEventListener('load', () => {
+        const loader = document.getElementById('loading');
+        loader.style.opacity = '0';
+        loader.style.transition = 'opacity 0.5s ease';
+        setTimeout(() => loader.style.display = 'none', 500);
+    });
+</script>

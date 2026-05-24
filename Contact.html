@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Barangay Poblacion Ilawod, Passi City Iloilo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+</head>
+<body>
+    <!-- Loading Overlay -->
+<div id="loading">
+    <div class="spinner"></div>
+</div>
+    <!-- Header with Navigation -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <img src="Logo1.jpg" alt="Barangay Logo" class="custom-logo">
+                    <div class="logo-text">
+                        <h1>Barangay Poblacion Ilawod</h1>
+                        <p>Passi City, Iloilo</p>
+                    </div>
+                </div>
+                
+                <nav>
+                    <ul class="nav-menu" id="navMenu">
+                        <li><a href="Index.html">Home</a></li>
+                        <li><a href="Services.html">Services</a></li>
+                        <li><a href="News.html">News</a></li>
+                        <li><a href="Contact.html">Contact</a></li>
+                    </ul>
+                    <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="contact-section">
+        <div class="container">
+
+            <div class="section-header fade-in-up">
+                <h2>Contact Us</h2>
+                <p>For more information about our whereabouts, just contact us on the given information below.</p>
+            </div>
+
+            <div class="contact-grid">
+
+                <!-- CONTACT FORM -->
+                <div class="contact-form fade-in-up">
+                    <h3>Reach Out to Us</h3>
+
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="acf52846-a798-463d-bcc0-d0f08b91d70e">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+
+                        <button type="submit" class="contact-btn">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <!-- CONTACT INFO -->
+                <div class="contact-info fade-in-up">
+                    <h3>Barangay Information</h3>
+
+                    <div class="info-box">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Barangay Poblacion Ilawod, Passi City, Iloilo</p>
+                    </div>
+
+                    <div class="info-box">
+                        <i class="fas fa-phone"></i>
+                        <p>+63 912 345 6789</p>
+                    </div>
+
+                    <div class="info-box">
+                        <i class="fas fa-envelope"></i>
+                        <p>barangayilawod@gmail.com</p>
+                    </div>
+
+                    <!-- GOOGLE MAP -->
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d489.3881510284621!2d122.6426372340313!3d11.105536322056736!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33af14639e6f3135%3A0xecfe417c13152013!2sPassi%201%20Central%20School!5e0!3m2!1sen!2sph!4v1775125793421!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+            });
+        });
+
+        // Active nav highlighting - normalized case
+        const links = document.querySelectorAll('.nav-menu a');
+        const currentPage = window.location.pathname.split("/").pop().toLowerCase();
+
+        links.forEach(link => {
+            if(link.getAttribute("href").toLowerCase() === currentPage){
+                link.classList.add("active");
+            }
+        });
+          window.addEventListener('load', () => {
+        const loader = document.getElementById('loading');
+        loader.style.opacity = '0';
+        loader.style.transition = 'opacity 0.5s ease';
+        setTimeout(() => loader.style.display = 'none', 500);
+    });
+    </script>
+</body>
+</html>
